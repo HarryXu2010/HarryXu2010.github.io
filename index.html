@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>猫窝 - 博客正在建设中，什么都会写一点</title><meta name="author" content="xixiqwq1"><meta name="copyright" content="xixiqwq1"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我思故我在">
+<meta property="og:type" content="website">
+<meta property="og:title" content="猫窝">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="猫窝">
+<meta property="og:description" content="我思故我在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/71adde64c724de94a4eb46dbfa12276c.png">
+<meta property="article:author" content="xixiqwq1">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/71adde64c724de94a4eb46dbfa12276c.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "猫窝",
+  "alternateName": [
+    "博客正在建设中，什么都会写一点",
+    "example.com"
+  ],
+  "url": "http://example.com/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '猫窝',
+  isHighlightShrink: true,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.0.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div id="web_bg" style="background-image: url(/img/125760062_p0.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/71adde64c724de94a4eb46dbfa12276c.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/125760062_p0.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">猫窝</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">猫窝</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/30/20251123-CCPC-Zhengzhou-%E6%B8%B8%E8%AE%B0/" title="CCPC Zhengzhou 游记">CCPC Zhengzhou 游记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-30T09:00:00.000Z" title="发表于 2025-11-30 17:00:00">2025-11-30</time></span></div><div class="content">CCPC Zhengzhou 游记Day110:20从7号线农业大学站出发，20多分钟才到，大家都拿了手机，只好打开电脑听歌了（） 11:00到郑州轻工业大学地铁站，出站之后直接向北走，从西门进校结果根本找不到在哪里签到，开始在稠密图跑spfa找路 感谢@xxz使用手机找到路，快速赶路…… 11:55到签到处领到大部分物料（衣服、CCPC痛包，吧唧），拍个照就去吃饭 12:10买了个米线，不好吃！喝杯蜜雪 13:30开幕式进场，机子是Ubuntu！ 几个领导讲话，主持人把CCPC组委会秘书长读成CCF组委会秘书长（CCF也干了？） 15:00@xxz去找jiangly要签名了，先开题嘿嘿 先开A，貌似很好写，但是怕假，就先留着思考一下 队友A、B都在猛攻B题，趁着他们在想的时候快速写出A，一发过了 看看E，队友@xxz在硬吃几发罚时之后用1月7日过了 17:00只有A、E两题过了，遗憾离场 Day28:00在体育场门口集合，放包进场，细节蓝书放位上，队友BaoTx带了一大盒魔芋爽（后来被证明确实很爽） 9:00开题！ 队友写M，写炸了，调试1h，开始看榜，B、G、M提交最多，果断...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/14/%E6%9C%9F%E4%B8%AD%E6%80%BB%E7%BB%93/" title="期中总结">期中总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-14T14:00:08.000Z" title="发表于 2025-11-14 22:00:08">2025-11-14</time></span></div><div class="content">期中总结物理考试结束的哨声想起，我感觉到有点崩溃，这次考试又要掉出100名了。 精彩回顾Day1语文前面的基础部分还好，就是《左迁至蓝关示侄孙湘》的一句感觉有点问题。 小说阅读最后一题“‘我’的多重含义”不会写，只能想到：  民兵队长； 共产党的领导； 像民兵队长一样的有担当、有智慧的人。  古诗文押中题了（） 剩40分钟时候开始看作文，“被看见”感觉议论文不是很好写，只好开记叙文。 抓住“一次赞赏”，把我语文学习的心路历程写进去，写到最后其实已经不知天地为何物了。 预估  政治选择整体比较简单，注意几个概念的辨析就写出来了，整体没什么模棱两可的。 从第一道大题开始就很抽象了，很多书上的东西都不知道怎么写，只好自己发挥，想到什么和课本沾边的角度就糊原话，辨析题列了个小提纲就往答题卡上写，写满5点收工。 20、21题都挺开放，就靠自己的三观（划掉）。 预估  Day2数学好题！ 先开选择，几分钟写完，看大题 20题第二问，第一宗罪： 由  算成 （） 刚看22题，欸！这不是必修一的均值不等式吗，直接拿下！ 然后： 22题最后一空，第二宗罪：算出来 ，皆大欢喜填上去，场下发现题目要求...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/08/KMP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="KMP学习笔记">KMP学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-08T03:45:14.000Z" title="发表于 2025-11-08 11:45:14">2025-11-08</time></span></div><div class="content">KMP学习笔记简述前言KMP（Knuth–Morris–Pratt）算法是一种高效的查找子串的算法，设有一个长度为  的文本  和一个长度为  的字符串 ，她可以在  的空间复杂度和  的时间复杂度求出所有  在  中出现的所有位置，是AC自动机的一个前置芝士 引入前缀函数定义（下文摘自OI Wiki） 给定一个长度为  的字符串 ，其前缀函数被定义为一个长度为  的数组 其中  ：  如果子串  有一对相等的真前缀与真后缀： 和 ，那么  如果不只有一对相等的，那么  就是其中最长的那一对的长度 如果没有相等的，  数学语言如下：特别的， 实现1234567891011vector&lt;int&gt; prefix_function(string s) {	int n = (int)s.length();	vector&lt;int&gt; pi(n);	for (int i = 1; i &lt; n; i++) {		int j = pi[i - 1];		while (j &gt; 0 &amp;&amp; s[i] != s[j]) j = pi[j - 1];		i...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/08/Trie%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Trie学习笔记">Trie学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-08T03:45:14.000Z" title="发表于 2025-11-08 11:45:14">2025-11-08</time></span></div><div class="content">Trie学习笔记简述前言Trie是一种有用的树形数据结构，她可以解决很多字符串问题。 定义Trie，即字典树，像字典一样的树 字典树的大致效果如下图：  可以发现，从根节点到树上任意节点的路径就代表一个字符串。如 表示的就是字符串 abc 。 我们定义  表示节点  的  字符边指向的下一个节点，  注意到所有边全是有向边，从根方向指向叶子方向。  实现封装类（摘自 OI Wiki） 123456789101112131415161718192021222324struct trie {  int nex[100000][26], cnt;  bool exist[100000];  // 该结点结尾的字符串是否存在  void insert(char *s, int len) {  // 插入字符串    int p = 0; // Trie的根节点(这里为0)    for (int i = 0; i &lt; len; i++) {      int c = s[i] - 'a';      if (!nex[p][c]) nex[p][c] = ++cnt;  // 如果...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/02/2025-CSP-S-%E6%B8%B8%E8%AE%B0/" title="2025 CSP-S 游记">2025 CSP-S 游记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-02T03:18:25.000Z" title="发表于 2025-11-02 11:18:25">2025-11-02</time></span></div><div class="content">2025 CSP-S 游记Day -4 ~ -1几个停课的学长天天打S组模拟赛，直接慌了，掏出Steam冷静一下（bushi） Day 0在机房魔域被抓包了，遂转战whk，细节小蓝书带回家复习 Day 0.5上午J组考的还行，心态比较好 Day 114:20极限进考场，拿到机子本以为已经有编辑器了，谁知道又得自己装（冰点还原我艹） 14:30先看时间空间限制，T3 2G的空间很瞩目（这个入还不知道 T3 是个字符串） 开个 T1，一眼定真写个贪心 15:00贪心假了，想着T1肯定是个保底题，怎么着也得打出来，遂奋力调试 15:50没调出来（对没错这个fw调了50min分了3类讨论还是没写出来） 转战T2，T3暴力 T2 一眼kruskal，城市化本来也想存到大的边集数组里的，炸了 T3 糊个暴力判断替换就跑（其实不会写AC自动机） 抽空看了看 T4 16:30写完 T1，T2，T3 的暴力，开始冥想 T1 正解 16:40忽然想到 T1 妙妙算法解决  的情况，写了一发挂了 17:10战略反攻阶段，T1暴力保住部分分，T2 糊板子 kruskal 抽奖（数据中有不用城市化的），T...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/01/2025-CSP-J-%E6%B8%B8%E8%AE%B0/" title="2025 CSP-J 游记">2025 CSP-J 游记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-01T14:58:25.000Z" title="发表于 2025-11-01 22:58:25">2025-11-01</time></span></div><div class="content">2025 CSP-J 游记upd勘误，丰富文章内容 Day -1在学校写板子，Luogu的评级一晚上没绷住 Day 0在机房魔域被抓包了，遂转战whk Day 1早上坐学校的班车，成功早起。在学校碰见 @xxz81，在路上对线J组考什么 场外遇见@BaoTx 到机房，发现开考前旁边有个入一直盯着我看，给我传纸条：  “您贵姓？”  不是哥们，我直接—— 开考！ 8:25桌面上没有编辑器，自己装了Codeblocks和红Dev（虽然最后只用了Codeblocks），顺便把命根lemon配置一下 其实考场上有0个人知道noi文件夹在哪，我还是找下载目录时候看到的（ltsc系统左边不显“download”好样的） 8:50**不对！**我T1怎么TLE了！（这个入想不起来要用桶排，sort炸了） 换youxian_queue（划掉），又TLE了！ 的数据果断桶排！ 9:10AC T1 开 T2，一眼定真糊了个妙妙取模小代码 9:45AC T2 开 T3 （万恶之源），开始考虑前缀和+贪心，写个  枚举爆了，之后开始冥想时间，从 DP 到 dfs 所有的算法 be like：  ！ 可以...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/23/2023-CSP-S-%E6%B6%88%E6%B6%88%E4%B9%90-%E9%A2%98%E8%A7%A3/" title="2023 CSP-S 消消乐 题解">2023 CSP-S 消消乐 题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-23T13:40:25.000Z" title="发表于 2025-10-23 21:40:25">2025-10-23</time></span></div><div class="content">[2023 CSP-S T2]消消乐解法关系图1234graph LRA(N^3_算法1) -- 优化 --&gt;B(N^2_算法2)B -- 启发 --&gt; C(哈希N^2_算法3)B -- DP --&gt; D(N_算法4) 算法一 (35pts)枚举每一个子串，用栈判断子串是否合法，预计 。 12345678910111213141516171819202122232425#include &lt;bits/stdc++.h&gt;#define int long longusing namespace std;int n;char a[2000005];int ans;signed main() {    ios::sync_with_stdio(0);    cin.tie(0);    cin &gt;&gt; n;    cin &gt;&gt; a + 1;    for(int i = 1; i &lt;= n - 1; i++) {        for(int j = i + 1; j &lt;= n; j++) {            if((j...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/20/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-20T02:40:25.000Z" title="发表于 2025-10-20 10:40:25">2025-10-20</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/71adde64c724de94a4eb46dbfa12276c.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">xixiqwq1</div><div class="author-info-description">我思故我在</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/HarryXu2010"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/20251123-CCPC-Zhengzhou-%E6%B8%B8%E8%AE%B0/" title="CCPC Zhengzhou 游记">CCPC Zhengzhou 游记</a><time datetime="2025-11-30T09:00:00.000Z" title="发表于 2025-11-30 17:00:00">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/14/%E6%9C%9F%E4%B8%AD%E6%80%BB%E7%BB%93/" title="期中总结">期中总结</a><time datetime="2025-11-14T14:00:08.000Z" title="发表于 2025-11-14 22:00:08">2025-11-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/08/KMP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="KMP学习笔记">KMP学习笔记</a><time datetime="2025-11-08T03:45:14.000Z" title="发表于 2025-11-08 11:45:14">2025-11-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/08/Trie%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Trie学习笔记">Trie学习笔记</a><time datetime="2025-11-08T03:45:14.000Z" title="发表于 2025-11-08 11:45:14">2025-11-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/02/2025-CSP-S-%E6%B8%B8%E8%AE%B0/" title="2025 CSP-S 游记">2025 CSP-S 游记</a><time datetime="2025-11-02T03:18:25.000Z" title="发表于 2025-11-02 11:18:25">2025-11-02</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AD%A6%E4%B9%A0-whk/" style="font-size: 1.1em; color: #999">学习 whk</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 1.5em; color: #99a9bf">学习</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 1.1em; color: #999">题解</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 1.3em; color: #99a1ac">游记</a> <a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/" style="font-size: 1.1em; color: #999">未分类</a> <a href="/tags/%E5%AD%A6%E4%B9%A0-OI/" style="font-size: 1.3em; color: #99a1ac">学习 OI</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              十月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-14T04:25:38.686Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By xixiqwq1</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.0.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (false) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (false) {
+      const sub = [].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const from = '出自 ' + data.from
+      typedJSFn.processSubtitle(data.hitokoto, [from])
+    })
+    .catch(err => {
+      console.error('Failed to get the Hitokoto API:', err)
+      typedJSFn.processSubtitle([])
+    })
+}
+typedJSFn.run(subtitleType)
+</script><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = `%%{init:{ 'theme':'${theme}'}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
